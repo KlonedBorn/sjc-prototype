@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>St. John's Cathedral</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Public+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+<div class="proto gut"><div class="col">
+  <span class="tag">Prototype</span>
+  <span>Sample data. Nothing is booked or sent.</span>
+  <span class="sp"></span>
+  <div class="modes" role="navigation" aria-label="Prototype views">
+    <a href="index.html" data-mode="site">Website</a>
+    <a href="admin.html" data-mode="admin">Admin dashboard</a>
+    <a href="scanner.html" data-mode="scanner">Guide scanner</a>
+  </div>
+  <button type="button" id="qBtn">Open questions</button>
+  <button type="button" id="resetBtn">Reset sample data</button>
+  <button type="button" id="tbdBtn" aria-pressed="true">Hide labels</button>
+</div></div>
+
+<header class="site gut" id="siteHeader"><div class="col">
+  <a class="wordmark" href="index.html">St. John's Cathedral<small>Anglican · St. John's, Antigua</small></a>
+  <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">Menu</button>
+  <nav class="main" id="mainNav" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="history.html">History</a>
+    <a href="worship.html">Worship</a>
+    <a href="news.html">Parish news</a>
+    <a href="outreach.html">Outreach</a>
+    <a href="weddings.html">Weddings</a>
+    <a href="visit.html">Visit</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="hdr-cta">
+    <a class="btn ghost" href="restore.html">Donate</a>
+    <a class="btn" href="book.html">Book a tour</a>
+  </div>
+</div></header>
+
+<main>
+<section class="view" data-view="home"><div class="gut"><div class="col stack">
+  <div class="hero">
+    <div class="ph" style="min-height:340px"><div><b>HERO PHOTO: the twin towers at golden hour</b>Client to supply. Shot from Newgate Street, wide.</div></div>
+    <div class="copy">
+      <div class="eyebrow">Diocese of North Eastern Caribbean &amp; Aruba</div>
+      <h1>A house of prayer on the hill since 1681</h1>
+      <p class="muted">Welcome to St. John's Cathedral. Join us for worship, find out what's happening in the parish, or come and explore over three centuries of Antiguan history.<span class="sample">Sample text</span></p>
+      <div class="chips" style="gap:10px">
+        <a class="btn" href="worship.html">Service times</a>
+        <a class="btn ghost" href="history.html">Our history</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="today">
+    <div class="open">
+      <div class="eyebrow" style="color:var(--sea)">Today at the Cathedral</div>
+      <div><div class="big" id="todayLabel">Open</div><p class="muted small" id="todayDate"></p></div>
+      <div class="sumrows">
+        <div><dt>Visitors welcome</dt><dd class="tnum">9:00 – 16:00 <span class="tbd">TBD</span></dd></div>
+        <div><dt>Guided tours from</dt><dd class="tnum" id="fromPrice">EC$40</dd></div>
+        <div><dt>Entry to pray</dt><dd>Always free</dd></div>
+      </div>
+      <a class="btn sea" href="book.html">Book a tour</a>
+    </div>
+    <div>
+      <div class="sec-head" style="margin-bottom:6px"><h3>What's on today</h3><a href="worship.html" class="small">Full calendar</a></div>
+      <ul class="tl" id="todayList"></ul>
+    </div>
+  </div>
+
+  <div class="stack" style="gap:16px">
+    <div class="sec-head"><h2>Parish news</h2><a href="news.html">All announcements</a></div>
+    <div class="cards" id="homeNews"></div>
+  </div>
+
+  <div class="stack" style="gap:16px">
+    <div class="sec-head"><h2>This week's services</h2><a href="worship.html">All service times</a></div>
+    <div class="tw"><table><thead><tr><th>Day</th><th>Time</th><th>Service</th><th>Where</th></tr></thead><tbody id="homeServices"></tbody></table></div>
+  </div>
+</div></div>
+
+  <div class="visit-band gut" style="margin-top:36px"><div class="col">
+    <div class="stack" style="gap:12px">
+      <div class="eyebrow">Visiting Antigua?</div>
+      <h2>Tour the Cathedral. Pay when you arrive.</h2>
+      <p>Choose a date and time, tell us how many are coming and we'll hold your place. No card details needed online. Cash and card accepted at the Front Gate.</p>
+      <div><a class="btn" href="book.html">Book a tour</a></div>
+    </div>
+    <ul>
+      <li>About a 10-minute walk from the cruise pier</li>
+      <li>Tours run Monday to Saturday</li>
+      <li>Walk-in visitors are always welcome</li>
+      <li>Your voucher arrives by email straight away</li>
+    </ul>
+  </div></div>
+
+<div class="gut"><div class="col stack" style="padding-top:36px">
+  <div class="stack" style="gap:16px">
+    <div class="sec-head"><h2>In the community</h2><a href="outreach.html">Outreach programmes</a></div>
+    <div class="cards" id="homeOutreach"></div>
+  </div>
+
+  <div class="band" style="border-radius:8px;border:1px solid var(--line)"><div class="col" style="padding-inline:20px;display:grid;gap:14px">
+    <div class="sec-head"><div><div class="eyebrow">Restoration</div><h2>Help us finish the work</h2></div><a class="btn" href="restore.html">Donate</a></div>
+    <div class="progress" aria-label="Restoration fund progress"><i style="width:62%"></i></div>
+    <p class="muted small tnum">EC$1.24m of EC$2.0m raised for the south tower and roof <span class="sample">Sample figure</span></p>
+  </div></div>
+
+  <div class="panel">
+    <div><h3>Stay in touch</h3><p class="muted small">Pick what you'd like to hear about.</p></div>
+    <form id="newsForm" class="stack" style="gap:14px">
+      <div class="chips">
+        <label class="chip"><input type="checkbox" id="nl1" checked><span>Parish notices</span></label>
+        <label class="chip"><input type="checkbox" id="nl2"><span>Services &amp; music</span></label>
+        <label class="chip"><input type="checkbox" id="nl3"><span>Restoration progress</span></label>
+        <label class="chip"><input type="checkbox" id="nl4"><span>Events &amp; visiting</span></label>
+      </div>
+      <div class="grid2"><label class="f">First name<input id="nlName" value="Sample"></label><label class="f">Email<input id="nlEmail" type="email" value="sample@example.com"></label></div>
+      <div><button type="submit">Sign up</button></div>
+    </form>
+  </div>
+
+  <div class="find">
+    <div class="stack" style="gap:12px">
+      <h2>How to find us</h2>
+      <p class="muted">Between Newgate Street and Long Street, St. John's. Visitors enter by the <b>Front Gate</b>.</p>
+      <div class="dirs" id="dirsHome"></div>
+    </div>
+    <div class="ph" style="min-height:260px"><div><b>MAP</b>Static map image with a link to Google Maps (embedded maps added in the real build)</div></div>
+  </div>
+</div></div>
+</section>
+</main>
+
+<footer class="site gut" id="siteFooter"><div class="col">
+  <div><h3>St. John's Cathedral</h3><p class="small" style="opacity:.8;margin-top:6px">Newgate Street, St. John's, Antigua &amp; Barbuda</p></div>
+  <div class="small" style="display:grid;gap:4px"><a href="visit.html">Visit</a><a href="worship.html">Service times</a><a href="news.html">Parish news</a><a href="gallery.html">Gallery</a></div>
+  <div class="small" style="display:grid;gap:4px"><a href="restore.html">Restoration &amp; donate</a><a href="weddings.html">Weddings</a><a href="contact.html">Contact &amp; FAQ</a><span style="opacity:.7">Privacy &amp; terms</span></div>
+</div></footer>
+
+<aside class="drawer" id="drawer" hidden aria-label="Open questions">
+  <div class="sec-head"><h2>Open questions</h2><button type="button" class="ghost" id="qClose">Close</button></div>
+  <p class="muted small">To settle with the church at tonight's showcase. Each one appears in the prototype with a <span class="tbd" style="margin:0">TBD</span> label.</p>
+  <ol id="qList"></ol>
+</aside>
+<div class="toast" id="toast" hidden role="status"></div>
+<script src="app.js"></script>
+</body>
+</html>

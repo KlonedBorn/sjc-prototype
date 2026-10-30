@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact & FAQ · St. John's Cathedral</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Public+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="contact">
+<div class="proto gut"><div class="col">
+  <span class="tag">Prototype</span>
+  <span>Sample data. Nothing is booked or sent.</span>
+  <span class="sp"></span>
+  <div class="modes" role="navigation" aria-label="Prototype views">
+    <a href="index.html" data-mode="site">Website</a>
+    <a href="admin.html" data-mode="admin">Admin dashboard</a>
+    <a href="scanner.html" data-mode="scanner">Guide scanner</a>
+  </div>
+  <button type="button" id="qBtn">Open questions</button>
+  <button type="button" id="resetBtn">Reset sample data</button>
+  <button type="button" id="tbdBtn" aria-pressed="true">Hide labels</button>
+</div></div>
+
+<header class="site gut" id="siteHeader"><div class="col">
+  <a class="wordmark" href="index.html">St. John's Cathedral<small>Anglican · St. John's, Antigua</small></a>
+  <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">Menu</button>
+  <nav class="main" id="mainNav" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="history.html">History</a>
+    <a href="worship.html">Worship</a>
+    <a href="news.html">Parish news</a>
+    <a href="outreach.html">Outreach</a>
+    <a href="weddings.html">Weddings</a>
+    <a href="visit.html">Visit</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="hdr-cta">
+    <a class="btn ghost" href="restore.html">Donate</a>
+    <a class="btn" href="book.html">Book a tour</a>
+  </div>
+</div></header>
+
+<main>
+<section class="view" data-view="contact"><div class="gut"><div class="col stack">
+  <div class="stack" style="gap:10px"><div class="eyebrow">Contact</div><h1>Send us an enquiry</h1>
+  <p class="muted">We aim to reply within 2 working days.<span class="tbd">TBD</span></p></div>
+  <div class="find">
+    <form class="panel" id="enqForm">
+      <label class="f">What is it about?
+        <select id="enqType"><option>General question</option><option>Large group / cruise group tour</option><option>Weddings</option><option>Venue or event hire</option><option>Donations &amp; restoration</option></select>
+        <span class="hint" id="enqRoute">Goes to: parish office <span class="tbd">Routing TBD</span></span></label>
+      <div class="grid2"><label class="f">Name<input id="enqName" value="Sample Visitor"></label><label class="f">Email<input id="enqEmail" type="email" value="sample@example.com"></label></div>
+      <div class="grid2" id="groupFields" hidden><label class="f">Preferred date<input id="enqDate" type="date"></label><label class="f">Group size<input id="enqSize" type="number" min="1" value="40"></label></div>
+      <label class="f">Message<textarea id="enqMsg">Hello, I have a question about visiting the Cathedral.</textarea></label>
+      <div><button type="submit">Send enquiry</button></div>
+    </form>
+    <div class="stack" style="gap:14px">
+      <div class="card"><h3>Parish office</h3><p class="tnum">Phone: +1 (268) 000-0000 <span class="sample">Sample</span></p><p>Email: office@stjohnscathedral.org <span class="sample">Sample</span></p><p class="muted small">Office hours Mon–Fri, 9:00 – 15:00</p><p class="muted small">WhatsApp button?<span class="tbd">TBD</span></p></div>
+      <div class="ph" style="min-height:200px"><div><b>MAP</b>Front Gate marked</div></div>
+    </div>
+  </div>
+  <div class="stack" style="gap:12px"><h2>Frequently asked questions</h2><div class="faq" id="faq"></div></div>
+</div></div></section>
+</main>
+
+<footer class="site gut" id="siteFooter"><div class="col">
+  <div><h3>St. John's Cathedral</h3><p class="small" style="opacity:.8;margin-top:6px">Newgate Street, St. John's, Antigua &amp; Barbuda</p></div>
+  <div class="small" style="display:grid;gap:4px"><a href="visit.html">Visit</a><a href="worship.html">Service times</a><a href="news.html">Parish news</a><a href="gallery.html">Gallery</a></div>
+  <div class="small" style="display:grid;gap:4px"><a href="restore.html">Restoration &amp; donate</a><a href="weddings.html">Weddings</a><a href="contact.html">Contact &amp; FAQ</a><span style="opacity:.7">Privacy &amp; terms</span></div>
+</div></footer>
+
+<aside class="drawer" id="drawer" hidden aria-label="Open questions">
+  <div class="sec-head"><h2>Open questions</h2><button type="button" class="ghost" id="qClose">Close</button></div>
+  <p class="muted small">To settle with the church at tonight's showcase. Each one appears in the prototype with a <span class="tbd" style="margin:0">TBD</span> label.</p>
+  <ol id="qList"></ol>
+</aside>
+<div class="toast" id="toast" hidden role="status"></div>
+<script src="app.js"></script>
+</body>
+</html>
