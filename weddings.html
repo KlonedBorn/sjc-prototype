@@ -5,41 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Weddings & hire · St. John's Cathedral</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Public+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Instrument+Sans:wght@500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body data-page="weddings">
-<div class="proto gut"><div class="col">
-  <span class="tag">Prototype</span>
-  <span>Sample data. Nothing is booked or sent.</span>
-  <span class="sp"></span>
-  <div class="modes" role="navigation" aria-label="Prototype views">
-    <a href="index.html" data-mode="site">Website</a>
-    <a href="admin.html" data-mode="admin">Admin dashboard</a>
-    <a href="scanner.html" data-mode="scanner">Guide scanner</a>
-  </div>
-  <button type="button" id="qBtn">Open questions</button>
-  <button type="button" id="resetBtn">Reset sample data</button>
-  <button type="button" id="tbdBtn" aria-pressed="true">Hide labels</button>
-</div></div>
-
+<body data-page="weddings" class="hide-tbd">
 <header class="site gut" id="siteHeader"><div class="col">
-  <a class="wordmark" href="index.html">St. John's Cathedral<small>Anglican · St. John's, Antigua</small></a>
+  <a class="wordmark" href="index.html">St. John's<br>Cathedral</a>
   <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">Menu</button>
   <nav class="main" id="mainNav" aria-label="Main">
-    <a href="index.html">Home</a>
-    <a href="history.html">History</a>
+    <a href="history.html">About Us</a>
     <a href="worship.html">Worship</a>
-    <a href="news.html">Parish news</a>
-    <a href="outreach.html">Outreach</a>
-    <a href="weddings.html">Weddings</a>
+    <a href="news.html">What's On</a>
     <a href="visit.html">Visit</a>
     <a href="contact.html">Contact</a>
+    <a class="nav-book" href="book.html">Book a tour</a>
   </nav>
-  <div class="hdr-cta">
-    <a class="btn ghost" href="restore.html">Donate</a>
-    <a class="btn" href="book.html">Book a tour</a>
-  </div>
 </div></header>
 
 <main>
@@ -53,14 +33,30 @@
 </main>
 
 <footer class="site gut" id="siteFooter"><div class="col">
-  <div><h3>St. John's Cathedral</h3><p class="small" style="opacity:.8;margin-top:6px">Newgate Street, St. John's, Antigua &amp; Barbuda</p></div>
-  <div class="small" style="display:grid;gap:4px"><a href="visit.html">Visit</a><a href="worship.html">Service times</a><a href="news.html">Parish news</a><a href="gallery.html">Gallery</a></div>
-  <div class="small" style="display:grid;gap:4px"><a href="restore.html">Restoration &amp; donate</a><a href="weddings.html">Weddings</a><a href="contact.html">Contact &amp; FAQ</a><span style="opacity:.7">Privacy &amp; terms</span></div>
+  <div class="fcol"><h3>St. John's Cathedral</h3><p>Newgate Street, St. John's,<br>Antigua &amp; Barbuda</p><p class="fnote">Anglican Diocese of the North Eastern Caribbean &amp; Aruba</p></div>
+  <div class="fcol"><a href="history.html">About the Cathedral</a><a href="relics.html">Relics &amp; treasures</a><a href="worship.html">Worship</a><a href="news.html">What's On</a><a href="outreach.html">Community outreach</a></div>
+  <div class="fcol"><a href="visit.html">Visiting the Cathedral</a><a href="book.html">Book a tour</a><a href="gallery.html">Gallery</a><a href="visit.html#getting-here">How to find us</a><a href="visit.html#access">Accessibility</a></div>
+  <div class="fcol"><a href="contact.html">Contact us</a><a href="weddings.html">Weddings &amp; venue hire</a><a href="restore.html">Support the restoration</a><span class="fnote">Privacy &amp; terms</span></div>
 </div></footer>
 
+<div class="proto-pill" id="protoPill">
+  <button type="button" id="protoToggle" aria-expanded="false" aria-controls="protoMenu">Prototype</button>
+  <div class="proto-menu" id="protoMenu" hidden>
+    <p class="muted small">Sample data. Nothing is booked or sent.</p>
+    <div class="pm-links modes">
+      <a href="index.html" data-mode="site">Website</a>
+      <a href="admin.html" data-mode="admin">Admin dashboard</a>
+      <a href="scanner.html" data-mode="scanner">Guide scanner</a>
+    </div>
+    <button type="button" id="qBtn">Open questions</button>
+    <button type="button" id="tbdBtn" aria-pressed="false">Show labels</button>
+    <button type="button" id="resetBtn">Reset sample data</button>
+  </div>
+</div>
+<a class="float-donate" href="restore.html">Make a Donation</a>
 <aside class="drawer" id="drawer" hidden aria-label="Open questions">
   <div class="sec-head"><h2>Open questions</h2><button type="button" class="ghost" id="qClose">Close</button></div>
-  <p class="muted small">To settle with the church at tonight's showcase. Each one appears in the prototype with a <span class="tbd" style="margin:0">TBD</span> label.</p>
+  <p class="muted small">Still to confirm with the church. Each one appears in the prototype with a <span class="tbd" style="margin:0">TBD</span> label.</p>
   <ol id="qList"></ol>
 </aside>
 <div class="toast" id="toast" hidden role="status"></div>

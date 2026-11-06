@@ -5,24 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Gate scanner · St. John's Cathedral</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Public+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Instrument+Sans:wght@500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body data-page="scanner">
-<div class="proto gut"><div class="col">
-  <span class="tag">Prototype</span>
-  <span>Sample data. Nothing is booked or sent.</span>
-  <span class="sp"></span>
-  <div class="modes" role="navigation" aria-label="Prototype views">
-    <a href="index.html" data-mode="site">Website</a>
-    <a href="admin.html" data-mode="admin">Admin dashboard</a>
-    <a href="scanner.html" data-mode="scanner">Guide scanner</a>
-  </div>
-  <button type="button" id="qBtn">Open questions</button>
-  <button type="button" id="resetBtn">Reset sample data</button>
-  <button type="button" id="tbdBtn" aria-pressed="true">Hide labels</button>
-</div></div>
-
+<body data-page="scanner" class="hide-tbd">
 
 
 <main>
@@ -38,9 +24,23 @@
 
 
 
+<div class="proto-pill" id="protoPill">
+  <button type="button" id="protoToggle" aria-expanded="false" aria-controls="protoMenu">Prototype</button>
+  <div class="proto-menu" id="protoMenu" hidden>
+    <p class="muted small">Sample data. Nothing is booked or sent.</p>
+    <div class="pm-links modes">
+      <a href="index.html" data-mode="site">Website</a>
+      <a href="admin.html" data-mode="admin">Admin dashboard</a>
+      <a href="scanner.html" data-mode="scanner">Guide scanner</a>
+    </div>
+    <button type="button" id="qBtn">Open questions</button>
+    <button type="button" id="tbdBtn" aria-pressed="false">Show labels</button>
+    <button type="button" id="resetBtn">Reset sample data</button>
+  </div>
+</div>
 <aside class="drawer" id="drawer" hidden aria-label="Open questions">
   <div class="sec-head"><h2>Open questions</h2><button type="button" class="ghost" id="qClose">Close</button></div>
-  <p class="muted small">To settle with the church at tonight's showcase. Each one appears in the prototype with a <span class="tbd" style="margin:0">TBD</span> label.</p>
+  <p class="muted small">Still to confirm with the church. Each one appears in the prototype with a <span class="tbd" style="margin:0">TBD</span> label.</p>
   <ol id="qList"></ol>
 </aside>
 <div class="toast" id="toast" hidden role="status"></div>

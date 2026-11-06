@@ -34,30 +34,37 @@ const SERVICES = [
   ["Sunday","07:00","Holy Eucharist (said)","Lady Chapel"],["Sunday","09:00","Sung Eucharist","Nave"],["Sunday","18:00","Choral Evensong","Nave"],
   ["Wednesday","12:00","Midweek Eucharist","Lady Chapel"],["Friday","07:00","Morning Prayer","Lady Chapel"]
 ];
+// History grouped by century (meeting 31 Oct 2026). Each event: [year, title, summary, details, photo note]
 const ERAS = [
-  ["1681","The first church","A simple wooden church is built on the hill above the harbour.",[
+  ["17th century","The first church","Settlers choose the hill above the harbour and build a wooden church.",[
     ["1681","Land set aside on the hill","Colonists choose the rise above St. John's harbour for a parish church.","The site was picked because it could be seen from ships entering the harbour and stood above the low, marshy ground of the early town. The land was given over for a church and a burial ground, the start of today's churchyard.","View from the harbour towards the hill"],
-    ["1683","Wooden church completed","A timber church opens for worship.","The first church was a modest wooden building with a shingle roof, built by local carpenters from imported and island timber. Little of it survives except references in parish records.","Artist's impression of the wooden church"],
-    ["1720","Churchyard extended","Burials spread across the hill as the town grows.","As St. John's grew into the island's main town, the churchyard was enlarged. Some of the oldest headstones still standing date from this period.","Early 18th-century headstones"]]],
-  ["1745","A church of brick","The wooden church is replaced by a larger brick building.",[
-    ["1745","Brick church begun","Work starts on a larger church built of brick.","A growing congregation and repeated storm damage led the parish to replace the timber church with a sturdier brick building on the same site.","Brick foundations uncovered during restoration"],
-    ["1782","Statues at the south gate","Figures of St. John the Baptist and St. John the Divine are placed at the gate.","The two lead statues that stand on the south gate pillars are said to have been taken from a French ship. They became a landmark for visitors arriving at the church.","The statues on the south gate"],
-    ["1842","Becomes a cathedral","The Diocese of Antigua is formed and St. John's becomes its cathedral.","With the creation of the diocese, the parish church was raised to cathedral status and became the seat of the first Bishop of Antigua.","Portrait of the first bishop"]]],
-  ["1843","The great earthquake","An earthquake badly damages the brick church.",[
-    ["8 Feb 1843","Earthquake strikes","A major earthquake shakes the Leeward Islands.","The earthquake damaged buildings across Antigua. The brick cathedral was left beyond repair and services moved to temporary premises.","Engraving of earthquake damage in St. John's"],
-    ["1843","Services moved","Worship continues in a temporary building.","While plans for a new cathedral were drawn up, the congregation met in a temporary space nearby.","Temporary church site"]]],
-  ["1848","Today's Cathedral","The present stone Cathedral with its twin towers is consecrated.",[
+    ["1683","Wooden church completed","A timber church opens for worship.","The first church was a modest wooden building with a shingle roof, built by local carpenters from imported and island timber. Little of it survives except references in parish records.","Artist's impression of the wooden church"]]],
+  ["18th century","A church of brick","The town grows and the wooden church is replaced in brick.",[
+    ["1720","Churchyard extended","Burials spread across the hill as the town grows.","As St. John's grew into the island's main town, the churchyard was enlarged. Some of the oldest headstones still standing date from this period.","Early 18th-century headstones"],
+    ["1745","Brick church begun","Work starts on a larger church built of brick.","A growing congregation and repeated storm damage led the parish to replace the timber church with a sturdier brick building on the same site.","Brick foundations uncovered during restoration"]]],
+  ["19th century","A cathedral is built","St. John's becomes a cathedral, survives an earthquake and is rebuilt in stone.",[
+    ["1842","Becomes a cathedral","The Diocese of Antigua is formed and St. John's becomes its cathedral.","With the creation of the diocese, the parish church was raised to cathedral status and became the seat of the first Bishop of Antigua.","Portrait of the first bishop"],
+    ["1843","The great earthquake","An earthquake leaves the brick church beyond repair.","The earthquake of February 1843 damaged buildings across Antigua. The brick cathedral could not be saved and services moved to a temporary building nearby.","Engraving of earthquake damage in St. John's"],
     ["1845","Foundation stone laid","Building of the stone cathedral begins.","The new design was built to survive future earthquakes: an outer shell of stone with a complete inner lining of timber, so the inside could flex if the walls moved.","Foundation stone"],
-    ["1847","Twin towers rise","The baroque-style towers are completed.","The two towers at the west end gave the Cathedral the silhouette that dominates the St. John's skyline today.","The twin towers from Newgate Street"],
+    ["1847","Twin towers rise","The towers at the west end are completed.","The two towers gave the Cathedral the outline that still marks the St. John's skyline today.","The twin towers from Newgate Street"],
     ["1848","Consecration","The new Cathedral is consecrated.","The finished building was consecrated and returned to full use as the cathedral of the diocese.","The nave and timber interior"]]],
-  ["1974","Damage and decline","A further earthquake damages the building and repairs begin.",[
+  ["20th century","Damage and decline","Earthquakes and storms take their toll on the building.",[
     ["1974","Earthquake damage","Another earthquake cracks the stonework.","The 1974 earthquake damaged the towers and walls. Emergency repairs kept the building in use, but a long period of decline followed.","Cracked stonework on the north tower"],
-    ["1995","Hurricane season damage","Storms add roof and window damage.","A run of hurricanes in the 1990s damaged the roof and windows, letting water into the timber interior.","Storm-damaged roof"]]],
-  ["2010s","Restoration","A restoration programme begins, documented on the restoration blog.",[
+    ["1995","Hurricane damage","Storms damage the roof and windows.","A run of hurricanes in the 1990s damaged the roof and windows, letting water into the timber interior.","Storm-damaged roof"]]],
+  ["21st century","Restoration","Parish and supporters overseas come together to restore the Cathedral.",[
     ["2010","Restoration blog launched","Progress starts being recorded online.","A restoration blog was started in October 2010 to share news, photos and appeals with supporters at home and overseas. It ran until 2019.","Screenshot of the restoration blog"],
     ["2011","Fundraising appeal","Donors in Antigua and the diaspora are asked to help.","An appeal was launched for gifts by wire transfer and in person, with regular updates to show how the money was spent.","Fundraising event"],
     ["2015","Roof and towers repaired","Major structural work is completed.","Scaffolding went up around the towers and the roof was repaired, making the building weathertight again.","Scaffolding on the towers"],
     ["2019","Interior work continues","Attention turns to the timber interior.","With the outside secured, work moved inside to repair the timber lining, pews and galleries.","Restored interior woodwork"]]]
+];
+// Relics shown as visitor attractions, separate from the timeline. Each: [date, name, summary, details, photo note, where to find it]
+const RELICS = [
+  ["18th century","The two St. John statues","Figures of St. John the Baptist and St. John the Divine guard the south gate.","The lead statues on the south gate pillars are said to have been taken from a French ship and brought to the church. They are the first thing many visitors photograph.","The statues on the south gate pillars","South gate"],
+  ["1848","The timber interior","A complete inner lining of timber built to ride out earthquakes.","Inside the stone shell is a second building made of timber. It was designed so the interior could move with an earthquake instead of collapsing, and it gives the nave its warm colour.","The nave looking east","Nave"],
+  ["19th century","The baptismal font","Where generations of Antiguans have been baptised.","The font stands near the west door, where baptisms traditionally begin a person's life in the church.","The font by the west door","West end"],
+  ["18th–19th century","Memorial tablets","Marble tablets remembering families, governors and clergy.","The walls carry memorials to people connected with the church and the island. Together they read like a history of St. John's.","Marble tablets on the north wall","North and south aisles"],
+  ["1681 onward","The historic churchyard","Graves and monuments from three centuries.","The churchyard holds some of the oldest graves on the island. Guides point out the most notable monuments and what they tell us about life in early St. John's.","Monuments in the churchyard","Churchyard"],
+  ["19th century","The Cathedral bells","Rung for services and great occasions.","The bells hang in the towers and are rung for Sunday services, weddings and national occasions.","Bell in the north tower","Towers"]
 ];
 const FAQ = [
   ["Do I have to pay online?","No. Your booking is held automatically. You pay at the Front Gate in cash or by card."],
@@ -81,7 +88,11 @@ const QUESTIONS = [
   ["Booking emails","Who gets the admin email, one per booking or a daily summary, and the sender name."],
   ["Enquiries","Who receives each enquiry type and the reply time to promise. WhatsApp button?"],
   ["Parish content","Real service times, announcements, outreach programmes, opening hours."],
-  ["Directions","Confirm walking and taxi directions to the Front Gate."]
+  ["Directions","Confirm walking and taxi directions to the Front Gate."],
+  ["Service times on this site?","Show services here, or link to the Anglican Church website if they are already listed there (Vachon to confirm)."],
+  ["Relics list","Which relics and treasures to feature, with photos and their stories."],
+  ["Hero and page photos","New photos of the twin towers, interior, relics and tours."],
+  ["Accessibility","Confirm the step-free route into the Cathedral."]
 ];
 const fakeNames = ["Sample: J. Miller","Sample: A. Thompson","Sample: R. Okafor","Sample: L. Dubois","Sample: M. Walsh","Sample: K. Joseph","Sample: S. Patel","Sample: D. Brown"];
 const fakeCountry = ["United States","United Kingdom","Canada","Antigua & Barbuda","Ireland","United States","Other Caribbean","Canada"];
@@ -156,8 +167,8 @@ function renderStatic(){
   const dirs = DIRS.map(([h,p],i)=>i===4?`<details><summary>${h}</summary><p><a href="https://www.google.com/maps/search/St+John%27s+Cathedral+Antigua" target="_blank" rel="noopener">Open in Google Maps</a></p></details>`:`<details><summary>${h}</summary><p>${p}</p></details>`).join("");
   $("#dirsHome").innerHTML = dirs; $("#dirsVisit").innerHTML = dirs;
   $("#guideList").innerHTML = GUIDE.map(g=>`<li>${g}</li>`).join("");
-  $("#timeline").innerHTML = ERAS.map((e,i)=>`<div class="era"><div class="yr">${e[0]}</div><div class="era-body"><h3>${e[1]}</h3><p class="muted">${e[2]}</p>
-    <ol class="subtl" aria-label="Key events, ${esc(e[1])}">${e[3].map((ev,j)=>`<li><button type="button" class="ev" data-ev="${i}-${j}" aria-haspopup="dialog"><span class="ev-yr">${ev[0]}</span><span class="ev-t">${esc(ev[1])}</span><span class="ev-s">${esc(ev[2])}</span><span class="ev-more" aria-hidden="true">Read more ›</span></button></li>`).join("")}</ol></div></div>`).join("") + `<p class="muted small"><span class="sample" style="margin:0">Draft dates and events, to be checked against the blog archive</span></p>`;
+  renderCenturies();
+  $("#relicGrid").innerHTML = RELICS.map((r,j)=>`<button type="button" class="relic" data-ev="r-${j}" aria-haspopup="dialog"><div class="pic ph-dark"><span class="ph-note">${esc(r[4])}</span></div><span class="where">${esc(r[5])}</span><h3>${esc(r[1])}</h3><p>${esc(r[2])}</p></button>`).join("");
   $("#tourCards").innerHTML = S.tours.map(t=>`<article class="card"><div class="ph"><div><b>PHOTO</b>${esc(t.name)}</div></div><h3>${esc(t.name)} <span class="tbd">TBD</span></h3><p class="muted small">${t.mins} minutes · ${esc(t.blurb)}</p><a class="btn" href="book.html?tour=${t.id}">Book this tour</a></article>`).join("");
   $("#priceList").innerHTML = `<div><dt>Adult</dt><dd class="tnum">EC$${money(S.prices.adult)} / US$${money(S.prices.adult/FX)} <span class="tbd">TBD</span></dd></div><div><dt>Child (${S.childAges})</dt><dd class="tnum">EC$${money(S.prices.child)} / US$${money(S.prices.child/FX)} <span class="tbd">TBD</span></dd></div><div><dt>Under 5</dt><dd>Free</dd></div>`;
   $("#faq").innerHTML = FAQ.map(f=>`<details><summary>${f[0]}</summary><p>${f[1]}</p></details>`).join("");
@@ -330,7 +341,7 @@ function renderAdmin(){
     body.innerHTML=`<h2>Website content</h2>
     <div class="panel"><div class="sec-head"><h3>Parish announcements</h3><button type="button" data-mock="Adding announcements">New announcement</button></div>${NEWS.map(n=>row(n.t,n.d)).join("")}</div>
     <div class="panel"><h3>Service times</h3>${SERVICES.map(s=>row(`${s[0]} ${fmtT(s[1])}`,s[2])).join("")}</div>
-    <div class="panel"><h3>History timeline, photos, FAQ</h3>${row("Timeline entries",ERAS.length+" eras, "+ERAS.reduce((n,e)=>n+e[3].length,0)+" events")}${row("Gallery photos","Waiting for new photos")}${row("FAQ",FAQ.length+" questions")}</div>`;
+    <div class="panel"><h3>History timeline, photos, FAQ</h3>${row("Timeline entries",ERAS.length+" centuries, "+ERAS.reduce((n,e)=>n+e[3].length,0)+" events")}${row("Relics & treasures",RELICS.length+" items")}${row("Gallery photos","Waiting for new photos")}${row("FAQ",FAQ.length+" questions")}</div>`;
   }
   if(adminTab==="reports"){
     const days=[...Array(7)].map((_,i)=>{const d=new Date(TODAY);d.setDate(d.getDate()-6+i);return d;});
@@ -368,7 +379,10 @@ function init(){
   const here=PAGE==="home"?"index.html":PAGE+".html";
   const mode=PAGE==="admin"?"admin":PAGE==="scanner"?"scanner":"site";
   document.querySelectorAll(".modes a").forEach(a=>a.classList.toggle("on",a.dataset.mode===mode));
-  document.querySelectorAll("nav.main a").forEach(a=>a.classList.toggle("on",a.getAttribute("href")===here));
+  const SECTION={history:"history.html",relics:"history.html",worship:"worship.html",news:"news.html",outreach:"news.html",visit:"visit.html",contact:"contact.html",book:"book.html"};
+  document.querySelectorAll("nav.main a").forEach(a=>a.classList.toggle("on",a.getAttribute("href")===SECTION[PAGE]));
+  try{ if(localStorage.getItem("sjc-labels")==="show"){ document.body.classList.remove("hide-tbd"); const b=$("#tbdBtn"); b.textContent="Hide labels"; b.setAttribute("aria-pressed","true"); } }catch(e){}
+  if(PAGE==="home") renderHome();
   const q=new URLSearchParams(location.search);
   renderStatic();
   if(PAGE==="book"){ const t=q.get("tour"); if(t&&tourById(t)) B.tour=t; renderBook(); }
@@ -377,8 +391,40 @@ function init(){
   if(PAGE==="contact"){ const e=ENQ[q.get("enq")]; if(e) $("#enqType").value=e; enqChange(); }
 }
 
+/* ---------- homepage ---------- */
+const DAYS=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+function upcomingServices(n){
+  const out=[], now=new Date();
+  for(let k=0;k<21 && out.length<n;k++){
+    const d=new Date(TODAY); d.setDate(d.getDate()+k);
+    SERVICES.filter(s=>s[0]===DAYS[d.getDay()]).sort((a,b)=>a[1].localeCompare(b[1])).forEach(s=>{
+      const [h,m]=s[1].split(":").map(Number); const at=new Date(d); at.setHours(h,m);
+      if(at>now && out.length<n) out.push({d:iso(d),s});
+    });
+  }
+  return out;
+}
+function renderHome(){
+  const pics=["Lady Chapel at morning light","The nave from the west door","The twin towers at dusk"];
+  $("#svcCards").innerHTML = upcomingServices(3).map((u,i)=>`<a class="img-card" href="worship.html"><div class="pic ph-dark"><span class="date-over">${parse(u.d).toLocaleDateString("en-GB",{day:"2-digit",month:"long"})}</span><span class="ph-note">${pics[i]}</span></div><h3>${fmtT(u.s[1])} · ${esc(u.s[2])}</h3><p>${esc(u.s[3])}. All are welcome.</p></a>`).join("");
+  $("#homeNewsList").innerHTML = NEWS.map(n=>`<a class="news-item" href="news.html"><div class="pic ph-dark" style="aspect-ratio:16/10"><span class="ph-note">${esc(n.ph)}</span></div><span class="date">${n.d}</span><h3>${esc(n.t)}</h3><p>${esc(n.b)}</p></a>`).join("");
+}
+
+/* ---------- history by century ---------- */
+let century = ERAS.length-3; // open on the 19th century, when today's Cathedral was built
+function renderCenturies(){
+  const tabs=$("#centTabs"); if(!tabs.isConnected) return;
+  tabs.innerHTML = ERAS.map((e,i)=>`<button type="button" role="tab" data-cent="${i}" aria-selected="${i===century}" class="${i===century?"on":""}">${e[0]}</button>`).join("");
+  const e=ERAS[century];
+  $("#centPanel").innerHTML = `<div class="cent-intro"><h2>${esc(e[1])}</h2><p>${esc(e[2])}</p></div>
+    <ol class="cent-list" aria-label="Events, ${esc(e[0])}">${e[3].map((ev,j)=>`<li><button type="button" class="ev" data-ev="${century}-${j}" aria-haspopup="dialog"><span class="ev-yr">${ev[0]}</span><span class="ev-t">${esc(ev[1])}</span><span class="ev-s">${esc(ev[2])}</span><span class="ev-more" aria-hidden="true">Read more ›</span></button></li>`).join("")}</ol>
+    <p class="muted small"><span class="sample" style="margin:0">Draft dates and events, to be checked against the blog archive</span></p>`;
+}
+
 /* ---------- history event details ---------- */
-const EVLIST = ERAS.flatMap((e,i)=>e[3].map((ev,j)=>({i,j,era:e,ev})));
+const EVLIST = document.body.dataset.page==="relics"
+  ? RELICS.map((r,j)=>({i:"r",j,era:["Relics & treasures",r[5]],ev:r}))
+  : ERAS.flatMap((e,i)=>e[3].map((ev,j)=>({i,j,era:e,ev})));
 let evPos = 0;
 function openEvent(key){
   evPos = EVLIST.findIndex(x=>`${x.i}-${x.j}`===key); if(evPos<0) return;
@@ -392,7 +438,8 @@ function showEvent(){
   $("#evTitle").textContent = ev[1];
   $("#evPhoto").innerHTML = `<div><b>PHOTO</b>${esc(ev[4])}</div>`;
   $("#evText").textContent = ev[3];
-  $("#evCount").textContent = `Event ${evPos+1} of ${EVLIST.length}`;
+  $("#evCount").textContent = `${EVLIST[evPos].i==="r"?"Item":"Event"} ${evPos+1} of ${EVLIST.length}`;
+  if(EVLIST[evPos].i!=="r" && EVLIST[evPos].i!==century){ century=EVLIST[evPos].i; renderCenturies(); }
   $("#evPrev").disabled = evPos===0; $("#evNext").disabled = evPos===EVLIST.length-1;
 }
 function closeEvent(){ const d=$("#evDlg"); if(typeof d.close==="function" && d.open) d.close(); else d.removeAttribute("open"); }
@@ -432,7 +479,9 @@ document.addEventListener("click",e=>{
   if(el.id==="checkIn"){ const b=S.bookings.find(x=>x.ref===scan); b.status="in"; save(); renderScanner(); toast(`${b.name.replace("Sample: ","")} checked in. The dashboard updates too.`); }
   if(el.id==="qBtn"){ $("#drawer").hidden=false; $("#qClose").focus(); }
   if(el.id==="qClose") $("#drawer").hidden=true;
-  if(el.id==="tbdBtn"){ const on=document.body.classList.toggle("hide-tbd"); el.textContent=on?"Show labels":"Hide labels"; el.setAttribute("aria-pressed",String(!on)); }
+  if(el.id==="tbdBtn"){ const on=document.body.classList.toggle("hide-tbd"); el.textContent=on?"Show labels":"Hide labels"; el.setAttribute("aria-pressed",String(!on)); try{ localStorage.setItem("sjc-labels",on?"hide":"show"); }catch(e){} }
+  if(el.id==="protoToggle"){ const m=$("#protoMenu"); m.hidden=!m.hidden; el.setAttribute("aria-expanded",String(!m.hidden)); }
+  if(el.dataset.cent){ century=+el.dataset.cent; renderCenturies(); }
   if(el.id==="menuBtn"){ const o=$("#mainNav").classList.toggle("open"); el.setAttribute("aria-expanded",String(o)); }
 });
 document.addEventListener("keydown",e=>{ if(e.key==="Escape") $("#drawer").hidden=true;
@@ -443,6 +492,7 @@ document.addEventListener("submit",e=>{
   if(f.id==="detForm"){ Object.assign(B.d,{name:$("#dName").value.trim(),email:$("#dEmail").value.trim(),phone:$("#dPhone").value.trim(),country:$("#dCountry").value,via:$("#dVia").value,viaName:$("#dViaName").value.trim(),lang:$("#dLang").value,heard:$("#dHeard").value,access:$("#dAccess").value.trim()});
     if(!B.d.name||!B.d.email){toast("Add a name and email so we can send the voucher.");return;} B.step=4; renderBook(); window.scrollTo(0,0); }
   if(f.id==="enqForm") toast(`Enquiry sent to the ${$("#enqType").value.startsWith("Large")?"tour coordinator":"parish office"} (prototype: nothing is sent).`);
+  if(f.id==="journeyForm"){ location.href=$("#journey").value; return; }
   if(f.id==="newsForm") toast("You're signed up (prototype: nothing is sent).");
   if(f.id==="setForm"){
     S.prices.adult=Math.max(0,+$("#sAdult").value||0); S.prices.child=Math.max(0,+$("#sChild").value||0);

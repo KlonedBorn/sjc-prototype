@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Relics &amp; treasures · St. John's Cathedral</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Instrument+Sans:wght@500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="relics" class="hide-tbd">
+<header class="site gut" id="siteHeader"><div class="col">
+  <a class="wordmark" href="index.html">St. John's<br>Cathedral</a>
+  <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">Menu</button>
+  <nav class="main" id="mainNav" aria-label="Main">
+    <a href="history.html">About Us</a>
+    <a href="worship.html">Worship</a>
+    <a href="news.html">What's On</a>
+    <a href="visit.html">Visit</a>
+    <a href="contact.html">Contact</a>
+    <a class="nav-book" href="book.html">Book a tour</a>
+  </nav>
+</div></header>
+
+<main>
+<section class="view" data-view="relics"><div class="gut"><div class="col stack">
+  <div class="page-head">
+    <div class="eyebrow">About us</div>
+    <h1>Relics &amp; treasures</h1>
+    <p class="lead">Objects and monuments with a story, all seen on a guided tour. Select one to read more.<span class="sample">Sample list</span></p>
+  </div>
+  <div class="relic-grid" id="relicGrid"></div>
+  <div class="relic-link">
+    <div><h2>See them for yourself</h2><p class="muted" style="margin-top:8px">A guide will show you each of these on the Cathedral tour.</p></div>
+    <a class="btn" href="book.html">Book a tour</a>
+  </div>
+  <dialog class="evdlg" id="evDlg" aria-labelledby="evTitle">
+    <div class="evdlg-in">
+      <div class="sec-head"><span class="eyebrow" id="evEra"></span><button type="button" class="ghost" id="evClose" aria-label="Close">Close</button></div>
+      <div class="ev-big" id="evYear"></div>
+      <h2 id="evTitle"></h2>
+      <div class="ph" id="evPhoto" style="min-height:180px"></div>
+      <p id="evText"></p>
+      <p class="muted small">Source: restoration blog archive <span class="sample">To be confirmed</span></p>
+      <div class="nav-row"><button type="button" class="ghost" id="evPrev">‹ Previous</button><span class="muted small tnum" id="evCount"></span><button type="button" id="evNext">Next ›</button></div>
+    </div>
+  </dialog>
+</div></div></section>
+</main>
+
+<footer class="site gut" id="siteFooter"><div class="col">
+  <div class="fcol"><h3>St. John's Cathedral</h3><p>Newgate Street, St. John's,<br>Antigua &amp; Barbuda</p><p class="fnote">Anglican Diocese of the North Eastern Caribbean &amp; Aruba</p></div>
+  <div class="fcol"><a href="history.html">About the Cathedral</a><a href="relics.html">Relics &amp; treasures</a><a href="worship.html">Worship</a><a href="news.html">What's On</a><a href="outreach.html">Community outreach</a></div>
+  <div class="fcol"><a href="visit.html">Visiting the Cathedral</a><a href="book.html">Book a tour</a><a href="gallery.html">Gallery</a><a href="visit.html#getting-here">How to find us</a><a href="visit.html#access">Accessibility</a></div>
+  <div class="fcol"><a href="contact.html">Contact us</a><a href="weddings.html">Weddings &amp; venue hire</a><a href="restore.html">Support the restoration</a><span class="fnote">Privacy &amp; terms</span></div>
+</div></footer>
+
+<div class="proto-pill" id="protoPill">
+  <button type="button" id="protoToggle" aria-expanded="false" aria-controls="protoMenu">Prototype</button>
+  <div class="proto-menu" id="protoMenu" hidden>
+    <p class="muted small">Sample data. Nothing is booked or sent.</p>
+    <div class="pm-links modes">
+      <a href="index.html" data-mode="site">Website</a>
+      <a href="admin.html" data-mode="admin">Admin dashboard</a>
+      <a href="scanner.html" data-mode="scanner">Guide scanner</a>
+    </div>
+    <button type="button" id="qBtn">Open questions</button>
+    <button type="button" id="tbdBtn" aria-pressed="false">Show labels</button>
+    <button type="button" id="resetBtn">Reset sample data</button>
+  </div>
+</div>
+<a class="float-donate" href="restore.html">Make a Donation</a>
+<aside class="drawer" id="drawer" hidden aria-label="Open questions">
+  <div class="sec-head"><h2>Open questions</h2><button type="button" class="ghost" id="qClose">Close</button></div>
+  <p class="muted small">Still to confirm with the church. Each one appears in the prototype with a <span class="tbd" style="margin:0">TBD</span> label.</p>
+  <ol id="qList"></ol>
+</aside>
+<div class="toast" id="toast" hidden role="status"></div>
+<script src="app.js"></script>
+</body>
+</html>
